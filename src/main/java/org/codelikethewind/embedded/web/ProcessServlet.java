@@ -40,6 +40,8 @@ public class ProcessServlet extends HttpServlet {
         UserTaskInstanceDesc task = runtimeDataService.getTaskById(1L);
 
         System.out.println("Task information " + task );
+        System.out.println("Task ActualOwner " + task.getActualOwner() );
+        System.out.println("Task CreatedBy " + task.getCreatedBy() );
 
         req.setAttribute("message", "process instance (id = "
         		+ processInstanceId + ") has been started.");
